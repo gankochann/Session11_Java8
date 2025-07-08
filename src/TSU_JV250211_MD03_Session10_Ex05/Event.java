@@ -1,17 +1,19 @@
 package TSU_JV250211_MD03_Session10_Ex05;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Event {
     private String name;
-    private String startTime;
-    private String endTime;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
     public Event() {
     }
 
-    public Event(String name, String startTime, String endTime) {
+    public Event(String name, LocalDateTime startTime, LocalDateTime endTime) {
         this.name = name;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -25,19 +27,19 @@ public class Event {
         this.name = name;
     }
 
-    public String getStartTime() {
+    public LocalDateTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 

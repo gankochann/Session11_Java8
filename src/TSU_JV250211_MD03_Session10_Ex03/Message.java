@@ -1,17 +1,18 @@
 package TSU_JV250211_MD03_Session10_Ex03;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Message {
     private String sender;
     private String content;
-    private Date timestamp;
+    private LocalDate timestamp;
 
     public Message() {
     }
 
-    public Message(String sender, String content, Date timestamp) {
+    public Message(String sender, String content, LocalDate timestamp) {
         this.sender = sender;
         this.content = content;
         this.timestamp = timestamp;
@@ -33,18 +34,18 @@ public class Message {
         this.content = content;
     }
 
-    public Date getTimestamp() {
+    public LocalDate getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(LocalDate timestamp) {
         this.timestamp = timestamp;
     }
 
     public void inputData(Scanner scanner){
         this.sender = scanner.nextLine();
         this.content = scanner.nextLine();
-        this.timestamp = new Date();
+        this.timestamp = LocalDate.now();
     }
     @Override
     public String toString() {

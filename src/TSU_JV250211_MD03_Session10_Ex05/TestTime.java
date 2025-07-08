@@ -1,5 +1,7 @@
 package TSU_JV250211_MD03_Session10_Ex05;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +28,8 @@ public class TestTime {
                     System.out.println("moi nhap vao t.gian ket thuc:");
                     String end = scanner.nextLine();
                     if (end.matches(regexDate)){
-                        Event event = new Event(eventName,start,end);
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+                        Event event = new Event(eventName, LocalDateTime.parse(start, formatter),LocalDateTime.parse(end , formatter));
                         events.add(event);
                         events.forEach(event1 -> System.out.println(event1.toString()));
                     }
